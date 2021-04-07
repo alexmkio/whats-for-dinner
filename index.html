@@ -1,10 +1,32 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
-  <body>
-    
+  <body title="Friends having burgers around a table">
+    <header>
+      <h1 class="what-for">What's for Dinner?</h1>
+      <button class="add-recipie">Add a Recipie</button>
+    </header>
+    <main>
+      <section class="thoughts">
+        <h1 class="looking-for">What are you looking for?*</h1>
+        <ul type="circle">
+          <li><a class="li-link" href="#">Side</a></li>
+          <li><a class="li-link" href="#">Main Dish</a></li>
+          <li><a class="li-link" href="#">Dessert</a></li>
+          <li><a class="li-link" href="#">Entire Meal</a></li>
+        </ul>
+        <button class="lets-cook">Let's Cook!</button>
+      </section>
+      <section class="suggestions">
+        <img class="crockpot" src="./assets/cookpot.svg" alt="An image of a crockpot">
+      </section>
+    </main>
+    <script src="./src/data.js"></script>
+    <script src="./src/main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
 </html>
