@@ -12,17 +12,29 @@
       <button class="add-recipie">Add a Recipie</button>
     </header>
     <main>
-      <section class="thoughts">
-        <h1 class="looking-for">What are you looking for?*</h1>
-        <ul type="circle">
-          <li><a class="li-link" href="#">Side</a></li>
-          <li><a class="li-link" href="#">Main Dish</a></li>
-          <li><a class="li-link" href="#">Dessert</a></li>
-          <li><a class="li-link" href="#">Entire Meal</a></li>
-        </ul>
-        <button class="lets-cook">Let's Cook!</button>
+      <section class="boxy">
+        <h1 class="looking-for">What are you looking for?<sup>*</sup></h1>
+        <form action="">
+          <section class="input">
+            <input type="radio" id="side" name="food" value="side" onClick=0>
+            <label class="li-link" for="side">Side</label>
+          </section>
+          <section class="input">
+            <input type="radio" id="mainDish" name="food" value="mainDish" onClick=0>
+            <label class="li-link" for="mainDish">Main Dish</label>
+          </section>
+          <section class="input">
+            <input type="radio" id="dessert" name="food" value="dessert" onClick=0>
+            <label class="li-link" for="dessert">Dessert</label>
+          </section>
+          <section class="input">
+            <input type="radio" id="entireMeal" name="food" value="entireMeal" onClick=0>
+            <label class="li-link" for="entireMeal">Entire Meal</label>
+          </section>
+          <input type="button" class="lets-cook" value="Let's Cook!" onClick="testButton(this.form)">
+        </form>
       </section>
-      <section class="suggestions">
+      <section class="boxy suggestions">
         <img class="crockpot" src="./assets/cookpot.svg" alt="An image of a crockpot">
       </section>
     </main>
