@@ -16,22 +16,22 @@
         <h1 class="looking-for">What are you looking for?<sup>*</sup></h1>
         <form action="">
           <section class="input">
-            <input type="radio" id="side" name="food" value="side" onClick=0>
+            <input type="radio" id="side" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
             <label class="li-link" for="side">Side</label>
           </section>
           <section class="input">
-            <input type="radio" id="mainDish" name="food" value="mainDish" onClick=0>
+            <input type="radio" id="mainDish" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
             <label class="li-link" for="mainDish">Main Dish</label>
           </section>
           <section class="input">
-            <input type="radio" id="dessert" name="food" value="dessert" onClick=0>
+            <input type="radio" id="dessert" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
             <label class="li-link" for="dessert">Dessert</label>
           </section>
           <section class="input">
-            <input type="radio" id="entireMeal" name="food" value="entireMeal" onClick=0>
+            <input type="radio" id="entireMeal" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
             <label class="li-link" for="entireMeal">Entire Meal</label>
           </section>
-          <input type="button" class="lets-cook" value="Let's Cook!" onClick="testButton(this.form)">
+          <input type="button" class="lets-cook" id="lets-cook" value="Let's Cook!" onClick="testButton(this.form)" disabled>
         </form>
       </section>
       <section class="boxy suggestions">
