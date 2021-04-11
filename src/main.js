@@ -1,7 +1,7 @@
 var suggestionSection = document.querySelector('.right-box');
 suggestionSection.addEventListener('click', handleSuggestionClick);
 
-var addButton = document.querySelector('.add-recipie-button');
+var addButton = document.querySelector('.add-recipe-button');
 addButton.addEventListener('click', unhideFooter);
 var footerSection = document.querySelector('footer');
 
@@ -53,7 +53,7 @@ function replaceSuggestionSectionWithMeal() {
 }
 
 function checkTypeExists(form) {
-  if (form.recipieType.value === 'side' || form.recipieType.value === 'Side' || form.recipieType.value === 'main dish' || form.recipieType.value === 'Main Dish' || form.recipieType.value === 'dessert' || form.recipieType.value === 'Dessert') {
+  if (form.recipeType.value === 'side' || form.recipeType.value === 'Side' || form.recipeType.value === 'main dish' || form.recipeType.value === 'Main Dish' || form.recipeType.value === 'dessert' || form.recipeType.value === 'Dessert') {
     filterByType(form)
     clearAddNewFields(form)
   } else {
@@ -62,9 +62,9 @@ function checkTypeExists(form) {
 }
 
 function filterByType(form) {
-  if (form.recipieType.value === 'side' || form.recipieType.value === 'Side') {
+  if (form.recipeType.value === 'side' || form.recipeType.value === 'Side') {
     evaluateSide(form)
-  } else if (form.recipieType.value === 'main dish' || form.recipieType.value === 'Main Dish') {
+  } else if (form.recipeType.value === 'main dish' || form.recipeType.value === 'Main Dish') {
     evaluateMain(form)
   } else {
     evaluateDessert(form)
@@ -72,8 +72,8 @@ function filterByType(form) {
 }
 
 function evaluateSide(form) {
-  if (sides.indexOf(form.recipieName.value) === -1) {
-    sides.push(form.recipieName.value)
+  if (sides.indexOf(form.recipeName.value) === -1) {
+    sides.push(form.recipeName.value)
     showWhatUserAdded(form)
   } else {
     showNameExistsAlready(form)
@@ -81,8 +81,8 @@ function evaluateSide(form) {
 }
 
 function evaluateMain(form) {
-  if (mains.indexOf(form.recipieName.value) === -1) {
-    mains.push(form.recipieName.value)
+  if (mains.indexOf(form.recipeName.value) === -1) {
+    mains.push(form.recipeName.value)
     showWhatUserAdded(form)
   } else {
     showNameExistsAlready(form)
@@ -90,8 +90,8 @@ function evaluateMain(form) {
 }
 
 function evaluateDessert(form) {
-  if (desserts.indexOf(form.recipieName.value) === -1) {
-    desserts.push(form.recipieName.value)
+  if (desserts.indexOf(form.recipeName.value) === -1) {
+    desserts.push(form.recipeName.value)
     showWhatUserAdded(form)
   } else {
     showNameExistsAlready(form)
@@ -101,26 +101,26 @@ function evaluateDessert(form) {
 function showWhatUserAdded(form) {
   suggestionSection.innerHTML = `
     <h1 class="italic zero-margin">You've added:</h1>
-    <p class="x-large">${form.recipieName.value} to the ${form.recipieType.value} array!</p>
+    <p class="x-large">${form.recipeName.value} to the ${form.recipeType.value} array!</p>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
 
 function clearAddNewFields(form) {
-  form.recipieType.value = '';
-  form.recipieName.value = '';
+  form.recipeType.value = '';
+  form.recipeName.value = '';
 }
 
 function showNameExistsAlready(form) {
   suggestionSection.innerHTML = `
-    <p class="x-large">${form.recipieName.value} already exists in the ${form.recipieType.value} array!</p>
+    <p class="x-large">${form.recipeName.value} already exists in the ${form.recipeType.value} array!</p>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
 
 function showNotTypeError(form) {
   suggestionSection.innerHTML = `
-    <h1 class="italic">Sorry, but ${form.recipieType.value} isn't an accepted recipie type. Type side, main dish, or dessert and try again.</h1>
+    <h1 class="italic">Sorry, but ${form.recipeType.value} isn't an accepted recipe type. Type side, main dish, or dessert and try again.</h1>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
