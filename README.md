@@ -8,7 +8,7 @@ Please visit our site [here](https://clairefields15.github.io/romcom/)!
 
 ## Features
 
-[Screenshot of the What's for Dinner website](https://user-images.githubusercontent.com/12686237/114321071-e6c8b180-9ae6-11eb-951e-3f56ef3c92fd.png)
+![Screenshot of the What's for Dinner website](https://user-images.githubusercontent.com/12686237/114321071-e6c8b180-9ae6-11eb-951e-3f56ef3c92fd.png)
 * When the user selects the “Entire Meal” option and then clicks the “Let’s Cook!” button, the user sees a message with a side, main and dessert option from the lists of possible dishes for all categories
 * When the meal items appear, the cookpot icon disappears
 * The user can click a clear button, which clears the page of any message. User should only be able to click the clear button if a food is visible. When the clear button is clicked and the food is removed, the image of the cookpot should re-appear.
@@ -17,7 +17,7 @@ Please visit our site [here](https://clairefields15.github.io/romcom/)!
 * The user can add a type and a name, click the “Add New” recipe and that recipe will be added to the appropriate list
 * When a new recipe is added, that recipe should automatically display instead of the cookpot icon
 * When a user tries to add to a recipe type that does not exist we see an error message.
-* A user can not add a recipie name that already exsists for that type.!
+* A user can not add a recipie name that already exsists for that type.
 
 
 ## Contributors
