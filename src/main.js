@@ -1,7 +1,7 @@
-var suggestionSection = document.querySelector('.suggestions');
+var suggestionSection = document.querySelector('.right-box');
 suggestionSection.addEventListener('click', handleSuggestionClick);
 
-var addButton = document.querySelector('.add-recipie');
+var addButton = document.querySelector('.add-recipie-button');
 addButton.addEventListener('click', unhideFooter);
 var footerSection = document.querySelector('footer');
 
@@ -19,35 +19,34 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function showSelection(form) {
+function findSelection(form) {
   for (Count = 0; Count < 3; Count++) {
     if (form.food[Count].checked)
     break;
   }
   if (Count === 0) {
-    show(sides)
+    replaceSuggestionSection(sides)
   } else if (Count === 1) {
-    show(mains)
+    replaceSuggestionSection(mains)
   } else if (Count === 2) {
-    show(desserts)
+    replaceSuggestionSection(desserts)
   } else {
-    showMeal()
+    replaceSuggestionSectionWithMeal()
   }
 }
 
-
-function show(pass) {
+function replaceSuggestionSection(pass) {
   suggestionSection.innerHTML = `
-    <h1 class="you-should">You should make:</h1>
-    <p class="what-for">${pass[getRandomIndex(pass)]}</p>
+    <h1 class="italic zero-margin">You should make:</h1>
+    <p class="xx-large zero-margin">${pass[getRandomIndex(pass)]}!</p>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
 
-function showMeal() {
+function replaceSuggestionSectionWithMeal() {
   suggestionSection.innerHTML = `
-    <h1 class="you-should">You should make:</h1>
-    <p class="what-for">${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]}
+    <h1 class="italic zero-margin">You should make:</h1>
+    <p class="x-large">${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]}
     and ${desserts[getRandomIndex(desserts)]} for dessert!</p>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
@@ -55,14 +54,14 @@ function showMeal() {
 
 function checkTypeExists(form) {
   if (form.recipieType.value === 'side' || form.recipieType.value === 'Side' || form.recipieType.value === 'main dish' || form.recipieType.value === 'Main Dish' || form.recipieType.value === 'dessert' || form.recipieType.value === 'Dessert') {
-    addNew(form)
+    filterByType(form)
     clearAddNewFields(form)
   } else {
-    notTypeError(form)
+    showNotTypeError(form)
   }
 }
 
-function addNew(form) {
+function filterByType(form) {
   if (form.recipieType.value === 'side' || form.recipieType.value === 'Side') {
     evaluateSide(form)
   } else if (form.recipieType.value === 'main dish' || form.recipieType.value === 'Main Dish') {
@@ -77,7 +76,7 @@ function evaluateSide(form) {
     sides.push(form.recipieName.value)
     showWhatUserAdded(form)
   } else {
-    alreadyExists(form)
+    showNameExistsAlready(form)
   }
 }
 
@@ -86,7 +85,7 @@ function evaluateMain(form) {
     mains.push(form.recipieName.value)
     showWhatUserAdded(form)
   } else {
-    alreadyExists(form)
+    showNameExistsAlready(form)
   }
 }
 
@@ -95,14 +94,14 @@ function evaluateDessert(form) {
     desserts.push(form.recipieName.value)
     showWhatUserAdded(form)
   } else {
-    alreadyExists(form)
+    showNameExistsAlready(form)
   }
 }
 
 function showWhatUserAdded(form) {
   suggestionSection.innerHTML = `
-    <h1 class="you-should">You've added:</h1>
-    <p class="what-for">${form.recipieName.value} to the ${form.recipieType.value} array!</p>
+    <h1 class="italic zero-margin">You've added:</h1>
+    <p class="x-large">${form.recipieName.value} to the ${form.recipieType.value} array!</p>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
@@ -112,16 +111,16 @@ function clearAddNewFields(form) {
   form.recipieName.value = '';
 }
 
-function alreadyExists(form) {
+function showNameExistsAlready(form) {
   suggestionSection.innerHTML = `
-    <p class="what-for">${form.recipieName.value} already exists in the ${form.recipieType.value} array!</p>
+    <p class="x-large">${form.recipieName.value} already exists in the ${form.recipieType.value} array!</p>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
 
-function notTypeError(form) {
+function showNotTypeError(form) {
   suggestionSection.innerHTML = `
-    <h1 class="you-should">Sorry, but ${form.recipieType.value} isn't an accepted recipie type. Type side, main dish, or dessert and try again.</h1>
+    <h1 class="italic">Sorry, but ${form.recipieType.value} isn't an accepted recipie type. Type side, main dish, or dessert and try again.</h1>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }

@@ -6,45 +6,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>What's for Dinner?</title>
   </head>
-  <body title="Friends having burgers around a table">
+  <body class="zero-margin" title="Friends having burgers around a table">
     <header>
-      <h1 class="what-for">What's for Dinner?</h1>
-      <button class="add-recipie">Add a Recipie</button>
+      <h1 class="whats-for">What's for Dinner?</h1>
+      <button class="add-recipie-button">Add a Recipie</button>
     </header>
-    <main>
-      <section class="boxy">
-        <h1 class="looking-for">What are you looking for?<sup>*</sup></h1>
+    <main class="zero-margin">
+      <section class="both-boxes">
+        <h1 class="looking-for x-large">What are you looking for?<sup>*</sup></h1>
         <form>
-          <section class="input">
+          <section class="shift-right zero-margin">
             <input type="radio" id="side" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
-            <label class="li-link" for="side">Side</label>
+            <label class="shift-right" for="side">Side</label>
           </section>
-          <section class="input">
+          <section class="shift-right zero-margin">
             <input type="radio" id="mainDish" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
-            <label class="li-link" for="mainDish">Main Dish</label>
+            <label class="shift-right" for="mainDish">Main Dish</label>
           </section>
-          <section class="input">
+          <section class="shift-right zero-margin">
             <input type="radio" id="dessert" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
-            <label class="li-link" for="dessert">Dessert</label>
+            <label class="shift-right" for="dessert">Dessert</label>
           </section>
-          <section class="input">
+          <section class="shift-right zero-margin">
             <input type="radio" id="entireMeal" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
-            <label class="li-link" for="entireMeal">Entire Meal</label>
+            <label class="shift-right" for="entireMeal">Entire Meal</label>
           </section>
-          <input type="button" class="lets-cook" id="lets-cook" value="Let's Cook!" onClick="showSelection(this.form)" disabled>
+          <input type="button" class="form-button lets-cook-button" id="lets-cook" value="Let's Cook!" onClick="findSelection(this.form)" disabled>
         </form>
       </section>
-      <section class="boxy suggestions">
+      <section class="both-boxes right-box">
         <img class="crockpot" src="./assets/cookpot.svg" alt="An image of a crockpot">
       </section>
     </main>
     <footer class="hidden">
       <form>
-        <label class="li-link">Recipie Type:</label>
-        <input type="text" class="text-box" name="recipieType" value="" onchange="document.getElementById('add-new').disabled = !this.value;">
-        <label class="li-link">Recipie Name:</label>
-        <input type="text" class="text-box" name="recipieName" value="" onchange="document.getElementById('add-new').disabled = !this.value;">
-        <input type="button" class="add-new" id="add-new" value="Add New" onClick="checkTypeExists(this.form)" disabled>
+        <label class="shift-right zero-margin">Recipie Type:</label>
+        <input type="text" class="input-text-box" name="recipieType" value="" onchange="document.getElementById('add-new').disabled = !this.value;">
+        <label class="shift-right zero-margin">Recipie Name:</label>
+        <input type="text" class="input-text-box" name="recipieName" value="" onchange="document.getElementById('add-new').disabled = !this.value;">
+        <input type="button" class="form-button add-new-button" id="add-new" value="Add New" onClick="checkTypeExists(this.form)" disabled>
       </form>
     </footer>
     <script src="./src/data.js"></script>

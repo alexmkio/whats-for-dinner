@@ -1,24 +1,14 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
+/* || General styles */
 
 html, body {
   height: 100%;
 }
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
-  /* background-position: center center; */
 }
 
 * {
@@ -26,12 +16,66 @@ body {
   color: black;
 }
 
+/* || UTILITIES */
+
+.hidden {
+  display: none;
+}
+
+/* || Typography */
+
+p {
+  text-align: center;
+}
+
+.x-large {
+  font-size: x-large;
+  font-weight: 900;
+}
+
+.xx-large {
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+.whats-for {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 0px 0px 0px 6px;
+  text-align: center;
+}
+
+.italic {
+  font-size: medium;
+  font-style: italic;
+}
+
+sup {
+  color: #ee5253;
+}
+
+/* || Header Main & Footer */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #0fb9b1;
   padding: 15px;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+section.both-boxes {
+  margin: 43px 0px 0px 0px;
+  padding: 40px;
+  background-color: rgba(225, 225, 225, .9);
+  width: 29%;
+  height: 45%;
 }
 
 footer {
@@ -43,84 +87,64 @@ footer {
   padding: 15px;
 }
 
-.what-for {
-  /* display: inline; */
-  font-size: 22px;
-  font-weight: 900;
-  margin: 0px 0px 0px 6px;
-  text-align: center;
-}
+/* || Buttons */
 
 button {
   display: inline;
   text-transform: uppercase;
   text-align: center;
   border: none;
-  font-size: 15px;
+  font-size: small;
+  border-radius: 3px;
+  padding: 8px;
 }
 
-.add-recipie {
+.add-recipie-button {
   background-color: #efefef;
   margin: 0px 6px 0px 0px;
-  padding: 8px;
-  border-radius: 3px;
 }
 
-main {
-  margin: 0;
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: space-around;
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
-
-section.boxy {
-  margin: 43px 0px 0px 0px;
-  padding: 40px;
-  background-color: rgba(225, 225, 225, .9);
-  width: 29%;
-  height: 35%;
-}
-
-.thoughts {
-
-}
-
-.looking-for {
-  font-size: 27px;
-  font-weight: 900;
-  margin: 20px 0px 10px 0px;
-}
-
-sup {
-  color: #ee5253;
-}
-
-.input {
-  margin: 0px 0px 0px 0px;
-  padding: 9px 0px;
-}
-
-.li-link {
-  text-decoration: none;
-  font-size: 18px;
-  margin: 0px 0px 0px 0px;
-  padding: 9px 0px;
-}
-
-.lets-cook {
+.form-button {
   display: inline;
   text-transform: uppercase;
   text-align: center;
   border: none;
-  font-size: 15px;
+  font-size: small;
   background-color: #0fb9b1;
-  margin: 10px 0px 0px 0px;
-  padding: 8px 50px;
   border-radius: 5px;
 }
 
-.suggestions {
+.lets-cook-button {
+  margin: 10px 0px 0px 0px;
+  padding: 8px 50px;
+}
+
+.add-new-button {
+  margin: 0px 6px 0px 0px;
+  padding: 8px;
+}
+
+.looking-for {
+  margin: 20px 0px 10px 0px;
+}
+
+.zero-margin {
+  margin: 0;
+}
+
+.shift-right {
+  padding: 9px 0px;
+}
+
+.right-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,41 +154,9 @@ sup {
 
 .crockpot {
   max-width: 30%;
-  /* vertical-align: middle; */
 }
 
-.clear-button {
-  background-color: #95a5a6;
-  color: white;
-  padding: 8px;
-  border-radius: 3px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-.you-should {
-  font-size: 18px;
-  font-style: italic;
-}
-
-.add-new {
-  display: inline;
-  text-transform: uppercase;
-  text-align: center;
-  border: none;
-  font-size: 15px;
-  background-color: #0fb9b1;
-  margin: 0px 6px 0px 0px;
-  padding: 8px;
-  border-radius: 3px;
-}
-
-.text-box {
+.input-text-box {
   height: 30px;
   width: 20%;
   margin: 0px 20px 0px 2px;
