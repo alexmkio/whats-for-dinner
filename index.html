@@ -14,7 +14,7 @@
     <main>
       <section class="boxy">
         <h1 class="looking-for">What are you looking for?<sup>*</sup></h1>
-        <form action="">
+        <form>
           <section class="input">
             <input type="radio" id="side" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
             <label class="li-link" for="side">Side</label>
@@ -31,13 +31,22 @@
             <input type="radio" id="entireMeal" name="food" onClick=0 onchange="document.getElementById('lets-cook').disabled = !this.checked;">
             <label class="li-link" for="entireMeal">Entire Meal</label>
           </section>
-          <input type="button" class="lets-cook" id="lets-cook" value="Let's Cook!" onClick="testButton(this.form)" disabled>
+          <input type="button" class="lets-cook" id="lets-cook" value="Let's Cook!" onClick="showSelection(this.form)" disabled>
         </form>
       </section>
       <section class="boxy suggestions">
         <img class="crockpot" src="./assets/cookpot.svg" alt="An image of a crockpot">
       </section>
     </main>
+    <footer class="hidden">
+      <form>
+        <label class="li-link">Recipie Type:</label>
+        <input type="text" class="text-box" name="recipieType" value="" onchange="document.getElementById('add-new').disabled = !this.value;">
+        <label class="li-link">Recipie Name:</label>
+        <input type="text" class="text-box" name="recipieName" value="" onchange="document.getElementById('add-new').disabled = !this.value;">
+        <input type="button" class="add-new" id="add-new" value="Add New" onClick="checkTypeExists(this.form)" disabled>
+      </form>
+    </footer>
     <script src="./src/data.js"></script>
     <script src="./src/main.js"></script>
   </body>
