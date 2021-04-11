@@ -120,7 +120,7 @@ function showNameExistsAlready(form) {
 
 function showNotTypeError(form) {
   suggestionSection.innerHTML = `
-    <h1 class="italic">Sorry, but ${form.recipeType.value} isn't an accepted recipe type. Type side, main dish, or dessert and try again.</h1>
+    <p class="x-large">Sorry, but ${form.recipeType.value} isn't an accepted recipe type. Type side, main dish, or dessert and try again.</p>
     <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
