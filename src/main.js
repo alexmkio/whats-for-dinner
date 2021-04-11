@@ -1,6 +1,11 @@
-var crockpotSection = document.querySelector('.suggestions');
-var clearButton = document.querySelector('.clear-button');
-clearButton.addEventListener('click', clearSuggestions);
+var suggestionSection = document.querySelector('.suggestions');
+suggestionSection.addEventListener('click', handleSuggestionClick);
+
+function handleSuggestionClick(e) {
+  if (e.target.id === "clearBTN") {
+    suggestionSection.innerHTML = `<img class="crockpot" src="./assets/cookpot.svg" alt="An image of a crockpot">`
+  }
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -23,22 +28,18 @@ function testButton(form) {
 }
 
 function show(pass) {
-  crockpotSection.innerHTML = `
+  suggestionSection.innerHTML = `
     <h1 class="you-should">You should make:</h1>
     <p class="what-for">${pass[getRandomIndex(pass)]}</p>
-    <button class="clear-button">Clear</button>
+    <button class="clear-button" id="clearBTN">Clear</button>
   `
 }
 
 function showMeal() {
-  crockpotSection.innerHTML = `
+  suggestionSection.innerHTML = `
     <h1 class="you-should">You should make:</h1>
     <p class="what-for">${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]}
     and ${desserts[getRandomIndex(desserts)]} for dessert!</p>
-    <button class="clear-button">Clear</button>
+    <button class="clear-button" id="clearBTN">Clear</button>
   `
-}
-
-function clearSuggestions() {
-  crockpotSection.innerHTML = `<img class="crockpot" src="./assets/cookpot.svg" alt="An image of a crockpot">`
 }
