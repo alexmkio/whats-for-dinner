@@ -4,7 +4,7 @@ What's for Dinner is a website that generates cooking suggestions for the user b
 
 The project spec can be found [here](https://frontend.turing.io/projects/module-1/dinner.html).
 
-Please visit our site [here](https://clairefields15.github.io/romcom/)!
+Visit the site [here](https://alexmkio.github.io/whats-for-dinner/).
 
 ## Features
 
