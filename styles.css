@@ -8,3 +8,129 @@ red - #ee5253
 
 */
 
+* {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+body {
+  margin: 0;
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
+  /* background-position: center center; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0fb9b1;
+  padding: 15px;
+}
+
+.what-for {
+  /* display: inline; */
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0px 0px 0px 6px;
+  text-align: center;
+}
+
+button {
+  display: inline;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+}
+
+.add-recipie {
+  background-color: #efefef;
+  margin: 0px 6px 0px 0px;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+main {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+section.boxy {
+  margin: 43px 0px 0px 0px;
+  padding: 40px;
+  background-color: rgba(225, 225, 225, .9);
+  width: 29%;
+}
+
+.thoughts {
+
+}
+
+.looking-for {
+  font-size: 27px;
+  font-weight: 900;
+  margin: 20px 0px 10px 0px;
+}
+
+sup {
+  color: #ee5253;
+}
+
+.input {
+  margin: 0px 0px 0px 0px;
+  padding: 9px 0px;
+}
+
+.li-link {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
+  padding: 9px 0px;
+}
+
+.lets-cook {
+  display: inline;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  background-color: #0fb9b1;
+  margin: 10px 0px 0px 0px;
+  padding: 8px 50px;
+  border-radius: 5px;
+}
+
+.suggestions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.crockpot {
+  max-width: 30%;
+  /* vertical-align: middle; */
+}
+
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+  padding: 8px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.you-should {
+  font-size: 18px;
+  font-style: italic;
+}
